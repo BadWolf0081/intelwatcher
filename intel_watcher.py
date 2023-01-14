@@ -24,7 +24,7 @@ def update_wp(wp_type, points):
         if portal_details is not None:
             try:
                 pname = maybe_byte(portal_details.get("result")[portal_name])
-                queries.update_point(wp_type, pname, maybe_byte(portal_details.get("result")[portal_url]), wp[0])
+                queries.update_point(wp_type, pname, maybe_byte(portal_details.get("result")[portal_url]), wp[0]), quries.close(self)
                 updated += 1
                 log.info(f"Updated {wp_type} {pname}")
             except Exception as e:
