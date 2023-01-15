@@ -85,8 +85,6 @@ def scrape_all(n):
 
         log.info(f"Updated {len(portals)} Portals")
 
-        queries.close()
-
         if len(tiles) > config.maxtiles:
             portals = []
             success_tiles = len([t for t in tiles if t.success])
